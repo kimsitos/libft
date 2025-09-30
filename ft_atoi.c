@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 16:30:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/09/30 16:49:34 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/09/30 12:59:49 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/09/30 13:27:51 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef LIBFT_H
-#define LIBFT_H
-
-//ctype.h
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isascii(int c);
 int	ft_isdigit(int c);
-int	ft_isprint(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-//string.h
-char	*ft_strchr(const char *str, int c);
-char	*ft_strrchr(const char *str, int c);
-char	*ft_strnstr(char *big, char *small, size_t size);
 
-long int	ft_strlen(char *str);
+int	ft_atoi(const char *ntpr)
+{
+	int	nbr;
+	int	neg;
 
-//stdlib.h
-int	ft_atoi(const char *ntpr);
-
-#endif
+	nbr = 0;
+	neg = 0;
+	while (*ntpr == ' ')
+		ntpr++;
+	if (*ntpr == '-')
+	{
+		neg = 1;
+		ntpr++;
+	}
+	while (ft_isdigit(*ntpr))
+	{
+		nbr = nbr * 10 + (*ntpr - '0');
+		ntpr++;
+	}
+	if (neg)
+		nbr = -nbr;
+	return (nbr);
+}
