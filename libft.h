@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 16:30:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/09/30 16:49:34 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/02 13:49:35 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #ifndef LIBFT_H
 #define LIBFT_H
 
@@ -24,11 +25,21 @@ int	ft_tolower(int c);
 //string.h
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
-char	*ft_strnstr(char *big, char *small, size_t size);
+char	*ft_strnstr(const char *big, const char *small, int size);
+void    *ft_memset(void *s, int c, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void    *ft_memmove(void *dest, const void *src, size_t n);
+//strings.h
+void	ft_bzero(void *s, size_t n);
 
-long int	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 
 //stdlib.h
 int	ft_atoi(const char *ntpr);
+
+//aditional functions
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif

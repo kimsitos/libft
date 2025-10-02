@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 12:40:46 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/01 15:19:23 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/01 16:17:34 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/02 13:48:11 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	while (*str)
-		str++;
-	str--;
-	while (*str)
+	const char	*temsrc;
+	size_t		srclen;
+
+	temsrc = src;
+	srclen = ft_strlen(temsrc);
+	while(n || srclen)
 	{
-		if (*str == c)
-			return ((char *) str);
-		str--;
+		ft_memset(&dest[srclen], temsrc[srclen], 1);
+		srclen--;
+		n--;
 	}
-	return (0);
+	return(dest);
 }

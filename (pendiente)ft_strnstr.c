@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 12:40:46 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/01 15:19:23 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/09/30 14:26:35 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/01 13:24:08 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strnstr(const char *big, const char *small, int len)
 {
-	while (*str)
-		str++;
-	str--;
-	while (*str)
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	if (!big) return (0);
+	while (big[i] || i < len)
 	{
-		if (*str == c)
-			return ((char *) str);
-		str--;
+		j = 0;
+		while (big[i + j] == small[j] && (j + i) < len)
+			j++;
+		if (!small[j]) return ((char *)&big[i]);
+		i++;
 	}
 	return (0);
 }

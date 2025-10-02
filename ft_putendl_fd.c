@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 12:40:46 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/01 15:19:23 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/01 13:00:29 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/01 15:19:00 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strrchr(const char *str, int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	while (*str)
-		str++;
-	str--;
-	while (*str)
-	{
-		if (*str == c)
-			return ((char *) str);
-		str--;
-	}
-	return (0);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
