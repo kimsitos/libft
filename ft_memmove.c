@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 16:17:34 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/02 13:48:11 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/02 22:03:18 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	const char	*temsrc;
-	size_t		srclen;
+	unsigned char *temdest;
+	unsigned const char *temsrc;
 
+	temdest = dest;
 	temsrc = src;
-	srclen = ft_strlen(temsrc);
-	while(n || srclen)
+	if(temdest >= temsrc)
 	{
-		ft_memset(&dest[srclen], temsrc[srclen], 1);
-		srclen--;
-		n--;
+		while(n--)
+		{
+			temdest[n] = temsrc[n];
+		}
 	}
+	else ft_memcpy(dest, src, n);
 	return(dest);
 }
