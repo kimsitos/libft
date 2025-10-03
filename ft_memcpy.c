@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 15:23:04 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/02 21:15:46 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/02 23:50:13 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t		i;
 	const char	*temsrc;
-	char	*temdest;
+	char		*temdest;
 
 	temsrc = src;
 	temdest = dest;

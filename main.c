@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 21:20:35 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/02 21:59:20 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/02 22:52:13 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ char target[ 10] = "fruit";
 int main(void)
 {
   printf( "Before memcpy, target is \"%s\"\n", target );
-  memmove( target, source, 5);
+  memcpy( target, target + 2, 5);
   printf( "After memcpy, target becomes \"%s\"\n", target );
 
   char target[MAX_LEN]="fruit";
   printf( "Before ft_memcpy, target is \"%s\"\n", target );
-  ft_memmove( target, source, 5);
+  memmove( target, target + 2, 5);
   printf( "After ft_memcpy, target becomes \"%s\"\n", target );
 
 }
