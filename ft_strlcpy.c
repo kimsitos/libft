@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 10:49:14 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/03 11:41:55 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/03 12:19:22 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while(i < (size - 1))
+	while (i < (size - 1))
 	{
 		dest[i] = src[i];
 		i++;
-
 	}
 	dest[i] = '\0';
 	return (ft_strlen(src));

@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 21:20:35 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/02 22:52:13 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/03 13:31:56 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,14 @@
 
 #define MAX_LEN 80
 
-char source[5 ] = "joke";
-char target[ 10] = "fruit";
 int main(void)
 {
-  printf( "Before memcpy, target is \"%s\"\n", target );
-  memcpy( target, target + 2, 5);
-  printf( "After memcpy, target becomes \"%s\"\n", target );
+	char buffer[60] = "hello";
+	size_t result = ft_strlcat(buffer, "nas", 9);
 
-  char target[MAX_LEN]="fruit";
-  printf( "Before ft_memcpy, target is \"%s\"\n", target );
-  memmove( target, target + 2, 5);
-  printf( "After ft_memcpy, target becomes \"%s\"\n", target );
-
+	printf("Buffer: %s\n", buffer);     // Imprime: "Hola mund"
+	printf("Longitud fuente: %zu\n", result);  // Imprime : 0
+	return 0;
 }
 
 /*********************  Expected output:  ************************
