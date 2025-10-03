@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 14:26:35 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/09/30 16:55:29 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/03 10:49:14 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/03 11:41:55 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *big, char *small, size_t len)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	i;
-	int	j;
+	size_t	i;
 
 	i = 0;
-	j = 0;
-	if(!big) return (0);
-	while (big[i] || i < len)
+	while(i < (size - 1))
 	{
-		j = 0;
-		while (big[i + j] == small[j] && (j + i) < len)
-			j++;
-		if (!small[j]) return (&big[i]);
+		dest[i] = src[i];
 		i++;
+
 	}
-	return (0);
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }
