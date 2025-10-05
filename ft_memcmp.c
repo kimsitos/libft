@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/05 17:36:23 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/05 19:08:36 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/05 17:48:40 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/05 19:36:14 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	char	*temp;
+	int	*tems1;
+	int	*tems2;
 
-	i = 0;
-	temp = (char *)s;
-	while (temp && i < n)
+	tems1 = (int *)s1;
+	tems2 = (int *)s2;
+	while ((tems1 || tems2) && n)
 	{
-		if (*temp == c)
-			return ((void *)temp);
-		temp++;
-		i++;
+		if (!(*tems1 == *tems2))
+			return (*tems1 - *tems2);
+		tems1++;
+		tems2++;
+		n--;
 	}
 	return (0);
 }
