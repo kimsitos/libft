@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 16:30:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/06 10:48:17 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:04:12 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int	ft_toupper(int c);
 int	ft_tolower(int c);
 //string.h
 char	*ft_strchr(const char *str, int c);
-size_t  ft_strlcat(char *dst, const char *src, size_t size);
+char	*strdup(const char *s);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *big, const char *small, size_t size);
