@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 12:17:35 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/06 13:48:06 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/06 15:53:52 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*temp;
 
-	if (size && nmemb > 2147483647 / size)
+	if (nmemb * size > 2147483648)
 		return (0);
 	if (!(nmemb || size))
-		return (0);
+		return (malloc(0));
 	temp = malloc(nmemb * size);
 	if (!temp)
 		return (0);
-	ft_bzero(temp, sizeof(temp));
+	ft_bzero(temp, nmemb * size);
 	return (temp);
 }
