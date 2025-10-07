@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/06 16:42:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/07 11:13:52 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/07 11:11:32 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/07 11:34:52 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	int		i;
+	int		j;
 	char	*temp;
-	size_t	j;
 
 	i = 0;
-	temp = malloc(len);
 	j = 0;
+	temp = malloc(ft_strlen(s1) + ft_strlen(s2));
 	if (!temp)
 		return (0);
-	while (s[i] && i < start)
-		i++;
-	while (s[i + j] && j < len)
+	while (s1[i])
 	{
-		temp[j] = s[i + j];
+		temp[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		temp[i + j] = s2[j];
 		j++;
 	}
 	return (temp);

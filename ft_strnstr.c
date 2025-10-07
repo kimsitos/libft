@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 08:51:11 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/06 11:17:18 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/07 11:26:05 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *small, size_t size)
 
 	i = 0;
 	j = 0;
-	if (!big[0])
+	if (!small[0])
 		return ((char *)big);
 	while (big[i])
 	{
