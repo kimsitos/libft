@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:19:10 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/07 22:34:03 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/08 00:27:06 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,22 @@ char *ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	start = 0;
-	end = ft_strlen(s) - 1;
-	while (ft_strchr(s1, set[start]))
+	end = ft_strlen(s1) - 1;
+	while (s1[start] &&ft_strchr(set, s1[start]))
 	{
-		printf("...");
+		printf(".");
 		start++;
 	}
-	while (ft_strrchr(s1, set[end]))
+	while (s1[end] &&ft_strrchr(set, s1[end]))
 	{
 		printf(":");
 		end--;
 	}
-	str = malloc(sizeof(char) * (end - start));
+	printf("%ld", (end - start + 1));
+	str = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!str)
 		return (0);
-	ft_strlcpy(str, &s1[start], end - start);
+	ft_strlcpy(str, &s1[start], end - start + 1);
 	return (str);
 }
 
@@ -43,7 +44,7 @@ char *ft_strtrim(char const *s1, char const *set)
 
 int main()
 {
-	char *s1 = "1234hello1234";
+	char *s1 = "1243hello1234";
 	char *s2 = "1234";
 	printf("%s\n", ft_strtrim(s1, s2));
 	return 0;
