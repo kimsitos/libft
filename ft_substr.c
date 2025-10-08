@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:42:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/07 11:13:52 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/07 14:52:24 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 
 	i = 0;
-	temp = malloc(len);
+	temp = malloc(len * sizeof(char));
 	j = 0;
 	if (!temp)
 		return (0);

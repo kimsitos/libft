@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 16:17:34 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/02 23:51:42 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/07 14:32:16 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

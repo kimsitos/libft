@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtim.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:19:10 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/08 00:27:06 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/08 11:24:43 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,18 @@ char *ft_strtrim(char const *s1, char const *set)
 		printf(".");
 		start++;
 	}
-	while (s1[end] &&ft_strrchr(set, s1[end]))
+	while (s1[end] &&ft_strchr(set, s1[end]))
 	{
 		printf(":");
 		end--;
 	}
-	printf("%ld", (end - start + 1));
-	str = (char *)malloc(sizeof(char) * (end - start + 1));
+	printf("%ld", start);
+	printf("%ld", end);
+	printf("%ld", (end - start));
+	str = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (!str)
 		return (0);
-	ft_strlcpy(str, &s1[start], end - start + 1);
+	ft_strlcpy(str, &s1[start], end - start + 2);
 	return (str);
 }
 
