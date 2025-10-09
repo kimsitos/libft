@@ -6,13 +6,13 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:32:41 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/09 15:12:39 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/09 16:13:32 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_countwords(const char *s, int c)
+static size_t	ft_count_words(const char *s, int c)
 {
 	size_t	words;
 	int		i;
@@ -25,13 +25,13 @@ static size_t	ft_countwords(const char *s, int c)
 	{
 		if (s[i] == c)
 		{
-			words++;
-			while (s[i++] && s[i + 1] == c)
+			while (s[i + 1] && s[i + 1] == c)
 				i++;
+			if (s[i + 1])
+				words++;
 		}
 		i++;
 	}
-	printf("%zu\n", words);
 	return (words);
 }
 
@@ -67,22 +67,24 @@ static char	**ft_split_words(char **str, char *s, int c)
 char	**ft_split(const char *s, int c)
 {
 	int		i;
-	size_t	words;
+	size_t	word;
 	char	**str;
 
 	i = 0;
-	words = ft_countwords(s, c);
-	str = (char **)malloc((words + 1) * sizeof(char *));
+	word = ft_count_words(s, c);
+	str = (char **)malloc((word + 1) * sizeof(char *));
 	if (!str)
 		return (0);
 	ft_split_words(str, (char *)s, c);
-	str[words] = 0;
+	str[word] = 0;
 	return (str);
 }
 
+/*#include <stdio.h>
+
 int main(void)
 {
-	char 	*str = " h";
+	char 	*str = " aaaaaaaa   aa aaaaaaaa a b ";
 	int		c = ' ';
 	char **split = ft_split(str, c);
 	int i = 0;
@@ -94,5 +96,4 @@ int main(void)
 	}
 	free (split);
 	return 0;
-}
-
+}*/
