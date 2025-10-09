@@ -6,65 +6,86 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:32:41 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/08 16:35:38 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:34:07 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static int	*ft_strlpos(const char *s1, int c)
+static size_t	ft_countwords(const char *s, int c)
 {
-	int		*pos;
-	int		i;
-	int		nbr;
+	size_t	words;
 
-	i = 0;
-	nbr = 0;
-	while (s1[i])
+	words = 1;
+	while (*s == c)
+		s++;
+	while (*s)
 	{
-		if (s1[i] == c)
-			nbr++;
-		i++;
-	}
-	printf("len1 = %d\n", i);
-	printf("found 1 = %d\n", nbr);
-
-	pos = (int *)malloc(sizeof(int) * nbr);
-	if (!pos)
-		return (0);
-	while (i > 0)
-	{
-		if (s1[i--] == c)
+		if (*s == c)
 		{
-			pos[nbr--] = i;
-			printf("number asigned = %d\n", pos[nbr]);
+			words++;
+			while (*s == c && s++)
+				s++;
 		}
+		s++;
 	}
-	printf("len 2 = %d\n", i);
-	printf("found 2 = %d\n", nbr);
-	return (pos);
+	
+	return (words);
 }
 
+static char	**ft_split_words(char **str, char *s, int c)
+{
+	int	start;
+	int	end;
+	int	x;
 
+	x = 0;
+	start = 0;
+	while (s[start])
+	{
+		end = 1;
+		if (s[start] != c)
+		{
+			while (s[start + end] && (s[start + end] != c))
+				end++;
+			str[x++] = ft_substr(s, start, end);
+			if (!s[x - 1])
+			{
+				while (x-- > 0)
+					free (str[x]);
+				free (str);
+				return (0);
+			}
+		}
+		start += end;
+	}
+	return (str);
+}
 
+char	**ft_split(const char *s, int c)
+{
+	int		i;
+	char	**str;
+	
+	i = 0;
+	str = (char **)malloc(ft_countwords(s, c) * sizeof(char *));
+	if (!str)
+		return (0);
+	ft_split_words(str, (char *)s, c);
+	return (str);
+}
 
 int main(void)
 {
-	char 	*str = "hollow";
+	char 	*str = "ooohasollooowoooo ioo";
 	int		c = 'o';
-	int		*pos =ft_strlpos(str, c);
-	int x = 0;
-	while(pos[x++])
+	char **split = ft_split(str, c);
+	int i = 0;
+	while (split[i])
 	{
-		printf("%d\n", pos[x]);
+		printf("Word %d = %s\n", i, split[i]);
+		i++;
 	}
 	return 0;
 }
 
-/* char **ft_split(const char *s, int c)
-{
-	
-	**str == 
-
-}*/
