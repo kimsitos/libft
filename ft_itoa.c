@@ -6,12 +6,11 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:49:00 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/10 15:26:09 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/10 18:34:19 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static size_t	ft_intl(long int n)
 {
@@ -36,6 +35,8 @@ static size_t	ft_intl(long int n)
 static char	*ft_charnb(char *str, long int n, size_t len)
 {
 	str[len--] = '\0';
+	if (n == 0)
+		str[len] = '0';
 	if (n < 0)
 	{
 		str[0] = '-';
@@ -62,12 +63,11 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-//#include <stdio.h>
-//
-//int main()
-//{
-//	char	*str = ft_itoa(-2147483647);
-//	printf("%s\n", str);
-//	free(str);
-//	return 0;
-//}
+#include <stdio.h>
+int main()
+{
+		char	*str = ft_itoa(-500);
+		printf("%s\n", str);
+		free(str);
+		return 0;
+}
