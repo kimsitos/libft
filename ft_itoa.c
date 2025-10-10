@@ -6,14 +6,14 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:49:00 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/10 14:05:49 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/10 15:26:09 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static size_t	ft_intl(int n)
+
+static size_t	ft_intl(long int n)
 {
 	size_t	len;
 
@@ -33,7 +33,7 @@ static size_t	ft_intl(int n)
 	return (len);
 }
 
-static char	*ft_charnb(char *str, int n, size_t len)
+static char	*ft_charnb(char *str, long int n, size_t len)
 {
 	str[len--] = '\0';
 	if (n < 0)
@@ -44,9 +44,7 @@ static char	*ft_charnb(char *str, int n, size_t len)
 	while (n)
 	{
 		str[len--] = (n % 10) + '0';
-		printf("Number %ld is %c", len, str[len + 1]);
 		n /= 10;
-		printf(" and actual number is %d \n", n);
 	}
 	return (str);
 }
@@ -64,10 +62,12 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int main()
-{
-	char	*str = ft_itoa(2147483647);
-	printf("%s\n", str);
-	free(str);
-	return 0;
-}
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char	*str = ft_itoa(-2147483647);
+//	printf("%s\n", str);
+//	free(str);
+//	return 0;
+//}
