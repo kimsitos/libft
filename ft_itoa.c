@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:49:00 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/09 19:49:11 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/10 14:05:49 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@ static size_t	ft_intl(int n)
 {
 	size_t	len;
 
-	len = 1;
+	len = 0;
 	if (n < 0)
+	{
 		len++;
-	while ((n % 10) != n)
+		n *= -1;
+	}
+	if (n == 0)
+		len = 1;
+	while (n > 0)
 	{
 		len++;
 		n /= 10;
@@ -28,40 +33,41 @@ static size_t	ft_intl(int n)
 	return (len);
 }
 
-static char	ft_charnb(int n)
+static char	*ft_charnb(char *str, int n, size_t len)
 {
+	str[len--] = '\0';
 	if (n < 0)
 	{
-		ft_charnb(-n);
-		return ('-');
+		str[0] = '-';
+		n *= -1;
 	}
-
-	return (n % 10  + '0');
+	while (n)
+	{
+		str[len--] = (n % 10) + '0';
+		printf("Number %ld is %c", len, str[len + 1]);
+		n /= 10;
+		printf(" and actual number is %d \n", n);
+	}
+	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	size_t	i;
 	size_t	len;
 	char	*str;
 
-	i = 0;
 	len = ft_intl(n);
 	str = (char *) malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (0);
-	while (i < len)
-	{
-		str[i] = ft_charnb(n);
-		i++;
-	}
-	str[i] = 0;
+	ft_charnb(str, n, len);
 	return (str);
 }
 
 int main()
 {
-	char	*str = ft_itoa(-12345);
+	char	*str = ft_itoa(2147483647);
 	printf("%s\n", str);
+	free(str);
 	return 0;
 }
