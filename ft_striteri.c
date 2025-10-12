@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 11:48:05 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 16:15:40 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/12 12:14:48 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/12 14:30:28 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-//#include <stdio.h>
+// #include <stdio.h>
 //
-//int main(void)
+//static void	ft_change(unsigned int i, char *c)
 //{
-//	char c = 'A';
-//	c = ft_tolower(c);
-//	printf("%c\n", c);
-//	return 0;
+//	*c += i;
+//}
+//int	main(void)
+//{
+//	char s[] = "hello";
+//	printf("ANTES %s\n", s);
+//	ft_striteri(s, ft_change);
+//	printf("DESPUES %s\n", s);
+//	return (0);
 //}

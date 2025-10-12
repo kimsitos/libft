@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 13:00:29 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/10 15:38:59 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/12 15:40:41 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void	ft_putendl_fd(char *s, int fd)
 //int main()
 //{
 //	ft_putendl_fd("hello world", 1);
+//	return 0;
 //}

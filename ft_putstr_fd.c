@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 12:53:13 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/01 15:19:08 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/12 15:41:24 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,10 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
+//int main()
+//{
+//	char i[] = "hello";
+//	ft_putstr_fd(i, 1);
+//	return 0;
+//}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 15:23:04 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/02 23:50:13 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/12 15:39:51 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,25 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+//#include <stdio.h>
+//#include <string.h>
+//#define LEN 5
+//
+//int main(void)
+//{
+//	int arr[LEN] = {1, 2, 4, '\0', 5};
+//	size_t size = 0;
+//	size_t i = 0;
+//
+//	int *copy = (int *)ft_memmove(arr, arr + 2, size);
+//	int *original = (int *)memmove(arr, arr + 2, size);
+//
+//	while(i < LEN)
+//	{
+//		printf("COPY =     %d\n", copy[i]);
+//		printf("ORIGINAL = %d\n", original[i]);
+//		i++;
+//	}
+//	return 0;
+//}

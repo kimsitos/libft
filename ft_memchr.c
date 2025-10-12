@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stcozaci <stcozaci@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 17:36:23 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/05 19:08:36 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/12 15:39:44 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,20 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main(void)
+//{
+//	int arr[] = {10, 20, 30, '\0', 50};
+//	int find = 50;
+//	size_t size = sizeof(arr);
+//
+//	int *copy = (int *)ft_memchr(arr, find, size);
+//	int *original = (int *)memchr(arr, find, size);
+//
+//	printf("COPY = %d\n", *copy);
+//	printf("ORIGINAL = %d\n", *original);
+//	return 0;
+//}

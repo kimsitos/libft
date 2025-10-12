@@ -1,35 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 10:46:30 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 16:03:55 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/12 11:15:53 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/12 12:21:09 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strmapi(char const *s, char (f)(unsigned int, char))
 {
-	size_t	len;
+	unsigned int	i;
+	char			*str;
 
-	len = 0;
-	while (*str)
+	i = 0;
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!str)
+		return (0);
+	while (s[i])
 	{
-		len++;
-		str++;
+		str[i] = (*f)(i, s[i]);
+		i++;
 	}
-	return (len);
+	str[i] = '\0';
+	return (str);
 }
 
-//#include <stdio.h>
-//
-//int	main(void)
+//static char	ft_change(unsigned int i, char c)
 //{
-//	const char *dest = "hello world";
-//	printf("%zu\n", ft_strlen(dest));
-//	return 0;
+//	c += i;
+//	return (c);
+//}
+//#include <stdio.h>
+//int	main()
+//{
+//	char *str = ft_strmapi("abcd", ft_change);
+//	printf("%s\n", str);
+//	free (str);
+//	return (0);
 //}
