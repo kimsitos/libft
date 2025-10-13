@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 16:30:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 14:01:56 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/13 15:26:36 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,10 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+//bonus
+typedef s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 #endif
