@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 17:48:40 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:39:47 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:09:12 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	*tems1;
-	int	*tems2;
+	size_t			i;
+	unsigned char	*tems1;
+	unsigned char	*tems2;
 
-	tems1 = (int *)s1;
-	tems2 = (int *)s2;
-	while ((tems1 || tems2) && n)
+	i = 0;
+	tems1 = (unsigned char *)s1;
+	tems2 = (unsigned char *)s2;
+	while (i < n)
 	{
-		if (!(*tems1 == *tems2))
-			return (*tems1 - *tems2);
-		tems1++;
-		tems2++;
-		n--;
+		if (tems1[i] != tems2[i])
+			return (tems1[i] - tems2[i]);
+		i++;
 	}
 	return (0);
 }
@@ -35,12 +35,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 //
 //int main(void)
 //{
-//	int arr[] = {1, 2, 4, '\0', 5};
+//	/*int arr[] = {1, 2, 4, '\0', 5};
 //	int find[] = {1, 2, 4, '\0', 7};
-//	size_t size = sizeof(arr);
+//	size_t size = sizeof(arr);*/
 //
-//	int copy = ft_memcmp(arr, find, size);
-//	int original = memcmp(arr, find, size);
+//	int copy = ft_memcmp("teste", "testex", 6);
+//	int original = memcmp("teste", "testex", 6);
 //
 //	printf("COPY = %d\n", copy);
 //	printf("ORIGINAL = %d\n", original);

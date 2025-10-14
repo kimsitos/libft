@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 11:11:32 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:50:31 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:11:36 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	temp = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
+	temp = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!temp)
 		return (0);
 	while (s1[i])
@@ -33,6 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		temp[i + j] = s2[j];
 		j++;
 	}
+	temp[i + j] = '\0';
 	return (temp);
 }
 

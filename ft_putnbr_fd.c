@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:08:42 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/10 18:04:21 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 12:49:47 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	ft_putnbr_fd(int n, int fd)
 	char	x;
 
 	if (n == -2147483648)
+	{
 		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);

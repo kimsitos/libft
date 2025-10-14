@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:01:42 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:43:10 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:18:44 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == (char)c)
 			return ((char *)str);
 		str++;
 	}
-	return (0);
+	if (*str == (char)c)
+		return ((char *)str);
+	return (NULL);
 }
 
 //#include <stdio.h>

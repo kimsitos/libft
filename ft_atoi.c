@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:59:49 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:10:30 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:01:16 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,14 @@ int	ft_atoi(const char *ntpr)
 
 	nbr = 0;
 	neg = 1;
-	while (*ntpr == ' ' || !ft_isprint(*ntpr))
+	while ((*ntpr >= 9 && *ntpr <= 13) || *ntpr == ' ')
 		ntpr++;
-	if (*ntpr == '-')
+	if (*ntpr == '-' || *ntpr == '+')
 	{
-		neg = -neg;
+		if (*ntpr == '-')
+			neg = -neg;
 		ntpr++;
 	}
-	if (*ntpr == '+')
-		ntpr++;
 	while (ft_isdigit(*ntpr))
 	{
 		nbr = nbr * 10 + (*ntpr - '0');

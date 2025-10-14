@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 16:17:34 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:39:23 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 20:11:43 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*temdest;
 	unsigned const char	*temsrc;
 
-	temdest = dest;
-	temsrc = src;
+	temdest = (unsigned char *)dest;
+	temsrc = (unsigned char *)src;
+	if (!src && !dest)
+		return (NULL);
 	if (temdest >= temsrc)
 	{
 		while (n--)

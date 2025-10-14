@@ -6,12 +6,11 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:00:39 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:48:40 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 17:33:41 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strdup(const char *s)
 {
@@ -28,7 +27,6 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	temp[i] = '\0';
-	printf("%s\n", temp);
 	return (temp);
 }
 

@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:32:41 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/09 16:13:32 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:39:58 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@ static size_t	ft_count_words(const char *s, int c)
 	size_t	words;
 	int		i;
 
-	words = 1;
 	i = 0;
+	words = 0;
 	while (s[i] == c)
+	{
+		if (!s[i + 1])
+			return (words);
 		i++;
+	}
+	words = 1;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -75,6 +80,11 @@ char	**ft_split(const char *s, int c)
 	str = (char **)malloc((word + 1) * sizeof(char *));
 	if (!str)
 		return (0);
+	if (!s[i])
+	{
+		str[i] = 0;
+		return (str);
+	}
 	ft_split_words(str, (char *)s, c);
 	str[word] = 0;
 	return (str);

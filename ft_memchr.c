@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 17:36:23 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:39:44 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:27:28 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	temp = (char *)s;
-	while (temp && i < n)
+	while (i < n)
 	{
-		if (*temp == c)
-			return ((void *)temp);
+		if (*temp == (char)c)
+			return ((char *)temp);
 		temp++;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 //#include <stdio.h>
