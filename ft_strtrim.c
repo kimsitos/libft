@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:19:10 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/08 13:12:48 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/16 11:04:58 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
+	if (!s1[0])
+		return (ft_strdup(""));
 	while (start < end && ft_strchr(set, s1[start]))
 		start++;
 	while (ft_strchr(set, s1[end]) && end > 0)
