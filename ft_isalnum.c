@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 14:56:53 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:10:24 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:34:58 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-//#include <stdio.h>
-//#include <ctype.h>
-//
-//int main(void)
-//{
-//	int i = '65';
-//	printf("copy = %d\n", ft_isalnum(i));
-//	printf("original = %d\n", isalnum(i));
-//	return 0;
-//}

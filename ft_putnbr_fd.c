@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:08:42 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 12:49:47 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:35:54 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &x, 1);
 	}
 }
-
-/*int	main(void)
-{
-	ft_putnbr_fd (0, 1);
-	return (0);
-}*/

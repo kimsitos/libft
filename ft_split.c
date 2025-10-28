@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:32:41 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/16 11:12:33 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:37:37 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,21 +90,3 @@ char	**ft_split(const char *s, int c)
 	str[word] = 0;
 	return (str);
 }
-
-/*#include <stdio.h>
-
-int main(void)
-{
-	char 	*str = " aaaaaaaa   aa aaaaaaaa a b ";
-	int		c = ' ';
-	char **split = ft_split(str, c);
-	int i = 0;
-	while (split[i])
-	{
-		printf("Word %d = %s\n", i, split[i]);
-		free (split[i]);
-		i++;
-	}
-	free (split);
-	return 0;
-}*/

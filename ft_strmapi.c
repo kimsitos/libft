@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 11:15:53 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 12:21:09 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:36:43 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ char	*ft_strmapi(char const *s, char (f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-//static char	ft_change(unsigned int i, char c)
-//{
-//	c += i;
-//	return (c);
-//}
-//#include <stdio.h>
-//int	main()
-//{
-//	char *str = ft_strmapi("abcd", ft_change);
-//	printf("%s\n", str);
-//	free (str);
-//	return (0);
-//}

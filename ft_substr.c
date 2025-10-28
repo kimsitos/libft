@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:42:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/15 14:42:58 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:38:59 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	temp[j] = 0;
 	return (temp);
 }
-
-//#include <stdio.h>
-//
-//int main(void)
-//{
-//	char *s = ft_substr("", 0, 0);
-//	printf("%s\n", s);
-//	return 0;
-//}

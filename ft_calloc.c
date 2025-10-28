@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 12:17:35 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 14:45:44 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:34:36 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(temp, nmemb * size);
 	return (temp);
 }
-
-//#include <stdio.h>
-//#define LEN 7
-//int	main(void)
-//{
-//	char *s = ft_calloc(LEN, sizeof(char));
-//	printf("%s", s);
-//	free(s);
-//	return 0;
-//}

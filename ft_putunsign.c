@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putunsign.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:34:45 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/28 13:37:59 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/24 16:43:34 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/28 13:28:00 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_putunsign(unsigned int n)
 {
-	size_t	i;
-	char	*temp;
+	char	x;
+	int		len;
 
-	i = 0;
-	temp = s;
-	while (i < n)
+	len = 0;
+	if (n > 9)
 	{
-		temp[i] = c;
-		i++;
+		len += ft_putunsign(n / 10);
+		len += ft_putunsign(n % 10);
 	}
-	return (temp);
+	else
+	{
+		x = n + '0';
+		len += write(1, &x, 1);
+	}
+	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:19:10 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/16 11:04:58 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:37:28 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], end - start + 2);
 	return (str);
 }
-/*#include <stdio.h>
-
-int main()
-{
-	char	*s1 = "1234h1234";
-	char	*set = "1234";
-	printf ("%s\n", ft_strtrim(s1, set));
-	return (0);
-}*/

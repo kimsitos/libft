@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 11:48:05 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 16:15:40 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:37:09 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-
-//#include <stdio.h>
-//
-//int main(void)
-//{
-//	char c = 'A';
-//	c = ft_tolower(c);
-//	printf("%c\n", c);
-//	return 0;
-//}

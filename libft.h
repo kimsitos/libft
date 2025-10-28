@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 16:30:33 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 12:30:15 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:34:20 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+
+//ft_printf
+int		ft_printf(char const *str, ...);
+int		ft_putchar(char c);
+int		ft_putstr(char *s);
+int		ft_putp(void *addr);
+int		ft_putnbr(int n);
+int		ft_putunsign(unsigned int nb);
+int		ft_puthex(unsigned long long nb, char *strhex);
 
 //ctype.h
 int		ft_isalnum(int c);

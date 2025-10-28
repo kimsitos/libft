@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 11:34:57 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 16:18:23 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:37:12 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-//#include <stdio.h>
-//
-//int main(void)
-//{
-//	char c = 'z';
-//	c = ft_toupper(c);
-//	printf("%c\n", c);
-//	return 0;
-//}

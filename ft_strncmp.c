@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 14:57:38 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 19:21:26 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:36:48 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-//#include <stdio.h>
-//
-//int	main(void)
-//{
-//	char dest[] = "hello world";
-//	const char src[] = "helis";
-//	printf("%d\n", ft_strncmp(dest, src, 14));
-//	return 0;
-//}

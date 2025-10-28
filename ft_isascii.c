@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 15:11:49 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 15:11:02 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:35:01 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-//#include <stdio.h>
-//#include <ctype.h>
-//
-//int main(void)
-//{
-//	char i = '+';
-//	printf("copy = %d\n", ft_isascii(i));
-//	printf("original = %d\n", isascii(i));
-//	return 0;
-//}

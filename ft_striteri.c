@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 12:14:48 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 14:30:28 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:36:21 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// #include <stdio.h>
-//
-//static void	ft_change(unsigned int i, char *c)
-//{
-//	*c += i;
-//}
-//int	main(void)
-//{
-//	char s[] = "hello";
-//	printf("ANTES %s\n", s);
-//	ft_striteri(s, ft_change);
-//	printf("DESPUES %s\n", s);
-//	return (0);
-//}

@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:59:49 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 18:01:16 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:34:30 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,3 @@ int	ft_atoi(const char *ntpr)
 	}
 	return (nbr * neg);
 }
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//
-//int main(void)
-//{
-//	const char *s = "  -2147483648";
-//	
-//	printf("copy  = %d\n", ft_atoi(s));
-//	printf("original = %d\n", atoi(s));
-//	return 0;
-//}

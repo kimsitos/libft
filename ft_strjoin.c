@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 11:11:32 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 19:11:36 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:36:25 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	temp[i + j] = '\0';
 	return (temp);
 }
-
-//#include <stdio.h>
-//
-//int	main(void)
-//{
-//	char const *str = "hello";
-//	char const *c = " world";
-//	printf("%s\n", ft_strjoin(str, c));
-//	return 0;
-//}

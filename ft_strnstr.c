@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 08:51:11 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 19:38:40 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:36:52 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ char	*ft_strnstr(const char *big, const char *small, size_t size)
 	}
 	return (0);
 }
-
-//#include <stdio.h>
-//
-//int	main(void)
-//{
-//	char dest[] = "hello world are you?";
-//	const char src[] = "old";
-//	printf("%s\n", ft_strnstr(dest, src, 14));
-//	return 0;
-//}

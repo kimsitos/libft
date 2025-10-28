@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:00:39 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/14 17:33:41 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:36:16 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ char	*ft_strdup(const char *s)
 	temp[i] = '\0';
 	return (temp);
 }
-
-//#include <stdio.h>
-//
-//int main(void)
-//{
-//	const char *s = "hello world";
-//	char *res = ft_strdup(s);
-//	printf("%s\n", res);
-//	free(res);
-//	return 0;
-//}

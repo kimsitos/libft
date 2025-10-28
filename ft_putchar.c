@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:34:45 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/28 13:37:59 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/10/01 12:25:15 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/10/28 13:39:11 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_putchar(char c)
 {
-	size_t	i;
-	char	*temp;
+	int	len;
 
-	i = 0;
-	temp = s;
-	while (i < n)
-	{
-		temp[i] = c;
-		i++;
-	}
-	return (temp);
+	len = 0;
+	len += write(1, &c, 1);
+	return (len);
 }

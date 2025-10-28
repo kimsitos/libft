@@ -6,7 +6,7 @@
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 18:49:00 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/10/12 11:37:19 by stcozaci         ###   ########.fr       */
+/*   Updated: 2025/10/28 13:35:13 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,3 @@ char	*ft_itoa(int n)
 	ft_charnb(str, n, len);
 	return (str);
 }
-
-//#include <stdio.h>
-//int main()
-//{
-//		char	*str = ft_itoa(-500);
-//		printf("%s\n", str);
-//		free(str);
-//		return 0;
-//}
