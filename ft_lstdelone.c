@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stcozaci <stcozaci@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 18:56:37 by stcozaci          #+#    #+#             */
-/*   Updated: 2025/11/27 18:03:39 by stcozaci         ###   ########.fr       */
+/*   Created: 2025/11/27 15:18:36 by stcozaci          #+#    #+#             */
+/*   Updated: 2025/11/27 15:52:50 by stcozaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*node;
-
-	node = malloc(sizeof(t_list));
-	if (!node)
-		return (0);
-	node->content = content;
-	node->next = NULL;
-	return (node);
+	if (lst && del)
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
-
 // #include <stdio.h>
-
-// int main(void)
+// int	main(void)
 // {
-// 	t_list *test;
-
-// 	test = ft_lstnew("hello world");
-// 	printf("%s\n", (char *)test->content);
-// 	if(test->next == NULL)
-// 		printf("Yes null\n");
+// 	t_list *h = ft_lstnew(ft_strdup("THREE"));
+// 	printf("Content before: %s\n", (char *) h->content);
+// 	ft_lstdelone(h, free);
+// 	printf("Content after: %s\n", (char *) h->content);
 // 	return (0);
 // }
